@@ -1,0 +1,31 @@
+
+<ion-header>
+                <ion-navbar color="danger">
+                                <ion-buttons start >
+                                    <button ion-button icon-only menuToggle > 
+                                      <ion-icon name="menu"></ion-icon>
+                                    </button>
+                                  </ion-buttons>
+                           
+                            </ion-navbar>
+</ion-header>
+<ion-content>
+
+
+    <div>
+            <ion-item color="red">
+                    <ion-label>Man Down</ion-label>
+                    <ion-checkbox color="dark" [(ngModel)]="ManDown"></ion-checkbox>
+                    
+           </ion-item>
+    </div>
+  
+   <div>
+        <button ion-button  round  color="dark" (click)="addAlert(alert)">Submit</button>
+   </div>
+   <div>
+        <button ion-button color="dark" (click)="return()">Return </button>
+   </div>
+   </ion-content>
+
+

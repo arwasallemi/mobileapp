@@ -1,0 +1,39 @@
+
+<ion-content> 
+<h1 color="danger"> Users Informations  </h1>
+
+    <ion-list>
+        <ion-item-sliding  *ngFor="let profile of profils | async"
+        detail-push  navPush="EditClientPage" [navParams]="{profile:profile}"
+        >
+          <ion-item>  
+              <ion-thumbnail item-start> 
+                  <img src="assets/img/person.png"> 
+                </ion-thumbnail> 
+                {{profile.name}}
+           <br/>
+                 {{profile.number}} 
+              <br/> 
+              <br/> 
+              <br/> 
+              <p> customerID : {{profile.customerID}}</p>
+              <p> dateBirth : {{profile.dateBirth}}</p>
+              <p> gender : {{profile.gender}}</p>
+              <p> height : {{profile.height}}</p>
+              <p> hairColor :  {{profile.hairColor}}</p>
+              <p> eyeColor : {{profile.eyeColor}}</p>
+              <p> build : {{profile.build}}</p>
+              <p> ethnicity : {{profile.ethnicity}}</p>
+              <p> nationality : {{profile.nationality}}</p>
+              <p> language : {{profile.language}}</p>
+              <p> image : {{profile.image}}</p>
+          </ion-item>
+         
+        </ion-item-sliding>
+      </ion-list>
+     
+     
+
+</ion-content>
+
+

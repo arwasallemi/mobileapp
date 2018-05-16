@@ -1,0 +1,86 @@
+<!--
+  Generated template for the ParametersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+  <ion-navbar color="red">
+        <ion-buttons left>
+                <button ion-button icon-only (click)="gotoSettings()">
+                    <ion-icon name="arrow-back"></ion-icon>
+                </button>
+            </ion-buttons>
+     
+    <ion-title>Man Down Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <ion-content padding>
+  
+      <ion-item>
+          <ion-checkbox color="light" [(ngModel)]="alarm"></ion-checkbox>
+          <ion-label >Alarm</ion-label>
+          
+      </ion-item>
+<!--><-->
+      <ion-item>
+          <ion-checkbox color="light" [(ngModel)]="tap"></ion-checkbox>
+          <ion-label >Double tap to activate</ion-label>         
+      </ion-item>
+<!--><-->
+      <ion-item>
+          <ion-checkbox color="light" [(ngModel)]="shake"></ion-checkbox>
+          <ion-label >shake to activate</ion-label>
+          
+      </ion-item>
+<!--><-->
+      <ion-item> 
+          <!--ion-checkbox  color="light" [(ngModel)]="ManDown"></ion-checkbox-->
+          <ion-label >Shake strength</ion-label>
+          <ion-range   [(ngModel)]="sStrength" color="danger" pin="true"></ion-range> 
+     </ion-item>
+<!--><-->
+      <ion-item>
+          <ion-label >Shake length</ion-label>
+          <ion-range [(ngModel)]="sLength" color="danger" pin="true"></ion-range> 
+      </ion-item>
+<!--><-->
+      <ion-item>
+          <ion-checkbox color="light" [(ngModel)]="pulse"></ion-checkbox>
+          <ion-label >pulse</ion-label>      
+      </ion-item>
+<!--><-->
+      <ion-item>
+          <ion-checkbox color="light" [(ngModel)]="beat"></ion-checkbox>
+          <ion-label >heartbeat</ion-label>
+     </ion-item>
+<!--><-->
+      <ion-item>
+          <ion-checkbox color="light" [(ngModel)]="video"></ion-checkbox>
+          <ion-label >video recording</ion-label>         
+      </ion-item>
+<!--><-->
+      <!--ion-item-->
+          <!--ion-label >Video length</ion-label-->   
+          <!--button ion-button color="danger">Light</button-->
+          <!--button ion-fab mini>Small</button-->
+          <ion-item>
+              Video Length
+          </ion-item>
+          <ion-fab left bottom >
+                <button ion-fab color="red" mini><ion-icon name="arrow-dropright"></ion-icon></button>
+                <ion-fab-list side="right">
+                  <button ion-fab>10s</button>
+                  <button ion-fab>15s</button>
+                  <button ion-fab>20s</button>
+                  <button ion-fab>25s</button>
+                </ion-fab-list>
+              </ion-fab> 
+      <!--/ion-item-->
+<!--><-->
+  </ion-content>
+
+

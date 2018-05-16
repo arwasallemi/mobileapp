@@ -1,0 +1,29 @@
+<!--
+  Generated template for the DeterrentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="red">
+  <ion-buttons left>
+      <button ion-button icon-only (click)="gotoSettings()">
+          <ion-icon name="arrow-back"></ion-icon>
+      </button>
+  </ion-buttons>
+    <ion-title>Alert Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-segment [(ngModel)]="alarmProfile" color="primary">
+        <ion-segment-button>
+          Deterrent
+        </ion-segment-button>
+        <ion-segment-button>
+          Stealth
+        </ion-segment-button>
+      </ion-segment>
+</ion-content>

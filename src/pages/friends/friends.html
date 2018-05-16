@@ -1,0 +1,65 @@
+<!--
+  Generated template for the FriendsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="danger">
+      <ion-buttons start>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>
+              <ion-searchbar  [(ngModel)]='q' (keyup)="onKeyUp($event)" show-cancel="true" placeholder="find contacts"></ion-searchbar>
+         </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-item>
+    <ion-input type="tel" [(ngModel)]="phoneNumber"></ion-input>
+</ion-item>
+<ion-list>
+  <ion-item *ngFor="let contact of contactsFound">
+    <ion-avatar item-start>
+<ion-icon class ="size "name="person"></ion-icon>
+    </ion-avatar>
+<h2 class="size"> {{contact?.displayName}}</h2>
+<p *ngFor="let num of contact.phoneNumbers">
+{{num.value}}
+
+</p>
+<button ion-button color="light">
+   <ion-icon color="danger" class="size" name="add"(click)="add(contacts)" width="250%"> 
+   </ion-icon>  
+   </button>
+   <button ion-button color="light"> 
+      <ion-icon class="size"  color="danger" name="call"(click)="call(phoneNumber)" width="250%"> 
+         </ion-icon>
+
+   </button>
+<button ion-button color="light"> 
+    <ion-icon  class="size"  color="danger" name="chatboxes"(click)="sendSMS(phoneNumber)" width="250%"> 
+        </ion-icon> 
+</button>
+ 
+
+  </ion-item>
+</ion-list>
+
+      <!--ion-fab bottom left>
+        <button color="primary" ion-fab>
+          <ion-icon name="call"(click)="call()" color="black">  </ion-icon>
+    
+        </button>
+        </ion-fab>
+        <ion-fab bottom right>
+          <button color="green" ion-fab>
+            <ion-icon  name="chatboxes"(click)="sendSMS()" color="black">   </ion-icon>  </button>
+          </ion-fab-->
+  </ion-content>
+
+

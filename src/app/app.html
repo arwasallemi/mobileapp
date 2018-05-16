@@ -1,0 +1,57 @@
+<ion-menu  id="myMenu" [content]="content">
+    <ion-header>
+        <ion-toolbar color="danger">
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+        
+
+            <ion-item menuClose (click)="gotoAlerte()">
+                    <ion-icon name="alert"> Alerts</ion-icon>
+           </ion-item>
+
+           <ion-item menuClose  (click)="gotoParam()">
+                <ion-icon name="settings"> Setting</ion-icon>
+          </ion-item>
+
+        
+       
+<ion-item menuClose  (click)="gotoAlerteparsms(phoneNumber)">
+    <ion-icon name="chatboxes"> Alertés par SMS</ion-icon>
+</ion-item>
+<ion-item menuClose (click)="gotoProfil()">
+    <ion-icon name="person">  Profile </ion-icon>
+</ion-item>
+          
+           <ion-item menuClose (click)="gotoList()">
+                <ion-icon name="list">  Emergency List </ion-icon>
+          </ion-item>
+          <ion-item menuClose (click)="gotoFriends()">
+                <ion-icon name="contact">  Contacts </ion-icon>
+          </ion-item>
+          <ion-item menuClose (click)="gotoGallery()">
+            <ion-icon name="analytics">  Gallery </ion-icon>
+      </ion-item>
+     
+  <ion-item menuClose  (click)="gotoAide()">
+    <ion-icon name="help"> Aide</ion-icon>
+</ion-item>
+<ion-item menuClose  (click)="gotoApropos()">
+<ion-icon name="book"> A propos</ion-icon>
+</ion-item>
+<ion-item menuClose  (click)="gotoShare()">
+<ion-icon name="share"> Share</ion-icon>
+</ion-item>
+
+          <ion-item menuClose (click)="gotoLogOut()">
+                <ion-icon name="log-out">  Log Out </ion-icon>
+          </ion-item>
+
+        </ion-list>
+    </ion-content>
+
+   
+</ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav>

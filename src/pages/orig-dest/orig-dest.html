@@ -1,0 +1,29 @@
+<ion-header>
+
+    <ion-navbar color="danger">
+            <ion-buttons start>
+                <button ion-button icon-only menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+              </ion-buttons>
+        </ion-navbar>
+        
+
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label>Start</ion-label>
+    <ion-input id="start" type="text" block [(ngModel)]="start"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label >Destination</ion-label>
+    <ion-input  id="destination" type="text"  block [(ngModel)]="end"></ion-input>
+  </ion-item>
+  <br/>
+  <br/> 
+  
+  <button class="getting-started" ion-button block (click)="calculateAndDisplayRoute()"> get direction</button>
+
+  <div id="map"></div>
+</ion-content>

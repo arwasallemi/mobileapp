@@ -1,0 +1,22 @@
+
+<ion-header>
+
+  <ion-navbar color="danger">
+      <ion-buttons start>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding color ="danger">
+<ion-tabs color="light">
+  <ion-tab [root]="tab1root" tabTitle="alert" tabIcon="alert"></ion-tab>
+  <ion-tab [root]="tab3root" tabTitle="Escalation" tabIcon="locate"></ion-tab>
+  <ion-tab [root]="tab5root" tabTitle="History Profils" tabIcon="information-circle"></ion-tab>
+
+</ion-tabs>
+</ion-content>

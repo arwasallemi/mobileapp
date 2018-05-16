@@ -1,0 +1,64 @@
+
+<ion-header>
+
+
+</ion-header>
+
+
+  
+<ion-content padding color="danger">
+   
+    <ion-item>
+
+        <ion-label> Alert type </ion-label>
+        </ion-item>
+        <form  method="post" [formGroup]="todo" (ngSubmit)="logForm()">
+        <select name = "alertType" [(ngModel)]="alertLocation.alertType" formControlName="alertType">
+          <option value="-">-</option>
+          <option value="forced / red alerts">forced / red alerts</option>
+          <option value="tracking">tracking</option>
+          <option value="meeting">meeting</option>
+          <option value="test">test</option>
+          <option value="cancelled">cancelled</option>
+          <option value="view all alerts">view all alerts</option>
+       
+       </select>
+      </form>
+       
+
+     
+
+
+    <button ion-button  block  (click)="sendAlert()" color="danger" [disabled]="!todo.valid">Send Alerts</button>
+   
+        <ion-label>Your Assigned Alerts  </ion-label>
+
+        <ion-item class="section-left">
+            <ion-label floating>Alert type</ion-label>
+            <ion-input clearInput  [(ngModel)]="alertType"></ion-input>
+        </ion-item>
+        <!--ion-input type="text" placeholder="No active alerts found">  </ion-input>
+
+        <ion-label>Latest Alerts  </ion-label>
+        <ion-input type="text" placeholder="There are no further alerts">
+        </ion-input-->
+       
+    
+      
+     
+
+
+  <!--ion-fab bottom left>
+    <button color="dark" ion-fab>
+      <ion-icon name="camera"  (click)="takePicture()"> </ion-icon>
+
+    </button>
+    </ion-fab>
+    <ion-fab bottom right>
+      <button color="dark" ion-fab>
+        <ion-icon name="videocam" (click)="startrecording()"></ion-icon>
+  
+      </button>
+      </ion-fab-->
+</ion-content>
+ 

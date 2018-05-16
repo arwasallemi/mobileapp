@@ -1,0 +1,70 @@
+
+<ion-header>
+        <ion-navbar color="danger">
+                <ion-buttons start>
+                    <button ion-button icon-only menuToggle>
+                      <ion-icon name="menu"></ion-icon>
+                    </button>
+                  </ion-buttons>
+            </ion-navbar>
+      </ion-header>
+
+<ion-content padding>
+
+
+
+  <ion-item no-lines color="light"  no-lines class="shadow">
+      <ion-icon item-end small name="person" > {{username}}</ion-icon>
+
+
+    photo :  <br/> 
+      <img src="{{imagePhoto}}" width="25%">
+
+  </ion-item>
+ 
+  
+   
+
+<ion-list>
+    <ion-item class="section-left">
+        <ion-label floating>username</ion-label>
+        <ion-input clearInput  [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <ion-item class="section-left">
+          <ion-label floating>Date of birth</ion-label>
+          <ion-input clearInput [(ngModel)]="dateBirth"></ion-input>
+      </ion-item>
+      <ion-item class="section-left">
+          <ion-label floating>Phone number</ion-label>
+          <ion-input clearInput  [(ngModel)]="number"></ion-input>
+      </ion-item>
+      <ion-item class="section-left">
+          <ion-label floating>Ethnicity</ion-label>
+          <ion-input clearInput  [(ngModel)]="ethnicity"></ion-input>
+      </ion-item>
+      <ion-item class="section-left">
+          <ion-label floating>eyeColor</ion-label>
+          <ion-input  clearInput  [(ngModel)]="eyeColor"></ion-input>
+      </ion-item>
+      <ion-item class="section-left">
+          <ion-label floating>hairColor</ion-label>
+          <ion-input clearInput  [(ngModel)]="hairColor"></ion-input>
+      </ion-item>
+      <ion-item class="section-left">
+          <ion-label floating>height</ion-label>
+          <ion-input clearInput  [(ngModel)]="height"></ion-input>
+      </ion-item>
+      <ion-item class="section-left">
+          <ion-label floating>language</ion-label>
+          <ion-input clearInput  [(ngModel)]="language"></ion-input>
+      </ion-item>
+      <ion-item class="section-left">
+          <ion-label floating>nationality</ion-label>
+          <ion-input clearInput  [(ngModel)]="nationality"></ion-input>
+      </ion-item>       
+</ion-list>
+
+<!--button block clear ion-button round (click)="editProfile(profile )">Save changes</button>
+
+<button block clear color="danger" ion-button round (click)="deleteProfile(profile.$key)">delete profile</button-->
+</ion-content>

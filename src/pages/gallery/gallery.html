@@ -1,0 +1,33 @@
+
+<ion-header>
+
+
+  <ion-navbar color="danger">
+      <ion-buttons start >
+          <button ion-button icon-only menuToggle > 
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+ 
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+	
+
+<ion-content padding>
+
+  <ion-card *ngFor="let photo of photos">
+    <img src="{{photo}}" />
+  </ion-card>
+
+  
+
+  <button ion-button (click)="captureImage()" color="light"> capture 
+  </button>
+
+
+
+
+</ion-content>
+

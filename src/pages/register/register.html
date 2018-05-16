@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar color="danger">
+    
+  </ion-navbar>
+
+</ion-header >
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating></ion-label>
+    <ion-input type="email"  placeholder="write your Email" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating></ion-label>
+    <ion-input [type]="passwordType"  placeholder="write your password" [(ngModel)]="user.password"></ion-input>
+  
+  <button  ion-button clear item-end (click) ="togglePassword()"  color="black" style="height:32px;">
+      <ion-icon name="eye" item-end > </ion-icon>
+     </button>
+    </ion-item>
+<br/> 
+<br/>
+  
+  <button color="danger" ion-button (click)="register(user)"  >Register</button>
+  <button color="danger" ion-button (click)="reset()"  >Reset</button>
+</ion-content>

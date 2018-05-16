@@ -1,0 +1,76 @@
+
+<ion-header >
+    <ion-icon name="alarm"></ion-icon> 
+  <ul>
+    <li><i class="fa fa-road"></i> Dominique Accou</li>
+    <li><i class="fa fa-phone"></i>  Tel (+324) 555-555588693663</li>
+    <li><i class="fa fa-envelope"></i> customer@praxis.test</li>
+     <ion-icon name="person"></ion-icon>
+    <ion-icon name="car"></ion-icon>
+    <ion-icon name="locate"></ion-icon>
+    <ion-icon name="download"></ion-icon>
+    <ion-icon name="information-circle"></ion-icon>
+  </ul>
+  <ion-item>
+        <ion-label floating>FirstName  LastName </ion-label>
+        <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Tél : </ion-label>
+          <ion-input type="number" [(ngModel)]="user.number"></ion-input>
+        </ion-item>
+ 
+</ion-header>
+
+<ion-content padding>
+ <ion-label>  <strong> User Information  : </strong>  </ion-label>
+ <!--div> 
+ <button ion-button outline block (click)="takepic()"> take picture  
+ </button> 
+ </div-->
+
+
+  <div>
+    
+    <ion-input placeholder="CustumerId" [(ngModel)]="item.customerid" type = "text"></ion-input>
+  </div>
+  <!--div> 
+   
+      <ion-input placeholder="JJ/MM/AAAA"   [(ngModel)]="item.datebirth"></ion-input>
+  </div-->
+
+<div> 
+
+    <ion-input placeholder="gender"  [(ngModel)]="item.gender" type = "text"></ion-input>
+</div>
+<div>
+   
+    <ion-input placeholder="height"  [(ngModel)]="item.height" type = "text" ></ion-input>
+</div>
+<div> 
+   
+    <ion-input  placeholder="hair" [(ngModel)]="item.hair" type = "text"></ion-input>
+</div>
+<div>
+   
+    <ion-input placeholder="eye"  [(ngModel)]="item.eye" type = "text"></ion-input>
+</div>
+<div>
+ 
+    <ion-input   [(ngModel)]="item.build"  placeholder="build"  type = "text"></ion-input>
+</div>
+<div>
+   
+    <ion-input placeholder="ethnicity"  [(ngModel)]="item.ethnicity" type = "text"></ion-input>
+</div>
+<div>
+   
+    <ion-input placeholder="nationality"  [(ngModel)]="item.nationality" type = "text"></ion-input>
+</div>
+<div>
+    
+    <ion-input  placeholder="language" [(ngModel)]="item.language" type = "text"></ion-input>
+</div>
+
+  <button ion-button block (click)="addItem()">Add</button>
+</ion-content>

@@ -1,0 +1,47 @@
+<!--
+  Generated template for the AidePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="danger">
+        <ion-buttons start >
+            <button ion-button icon-only menuToggle > 
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+   
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <br/>
+    <h3>  A suggestion – an issue, contact us </h3> 
+    <form [formGroup]="todo" (ngSubmit)="logForm()">
+    <ion-item>
+        <ion-label floating >Name </ion-label>
+        <ion-input type="text" formControlName="name" [(ngModel)]="profile.name" ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating >Email  : </ion-label>
+          <ion-input type="email" formControlName="emailAide" [(ngModel)]="profile.emailAide"    ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating >Subject : </ion-label> 
+            <ion-input type="text" formControlName="subject" [(ngModel)]="profile.subject" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating >Message : </ion-label>
+              <ion-input type="text"  formControlName="msg"[(ngModel)]="profile.msg"></ion-input>
+            </ion-item>
+            </form>
+          
+
+            <button ion-button  block [disabled]="!todo.valid" (click)="send()" color="danger">Send to Administrator</button>
+            <button ion-button  block  (click)="reset()" color="danger">Reset</button>
+
+
+</ion-content>
